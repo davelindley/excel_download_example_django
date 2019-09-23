@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+<p>Hello World</p>
+
+<button onclick="sendData()">PUSH THE BUTTON</button>
+
+</body>
+
+<script>
+    function sendData() {
+    $.ajax({
+    url: "endpoint",
+    data:{'hello1':'world1', 'hello2':'world2'},
+    dataType: "text",
+    success: function(){
+        location.assign('endpoint')
+        }
+    })
+  }
+
+    
+</script>
+
+</html>
